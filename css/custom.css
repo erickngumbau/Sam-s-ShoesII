@@ -1,0 +1,105 @@
+.top{
+    margin-top: 50px;
+}
+.imgtop{
+    height: 500px;
+}
+.txtcenter{
+    text-align: center;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+.rightclass{
+    margin-left: 10px;
+}
+.imageheight{
+    height: 230px;
+}
+.imageheightII{
+    height: 100px;
+}
+.imageheightlogo{
+  height: 50px;
+}
+div.scrollmenu {
+  /* background-color: #333; */
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu div {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  width: 18rem;
+}
+
+div.scrollmenu div:hover {
+  background-color: rgb(60, 69, 70);
+}
+/* .imageheightII{
+    height: 120px;
+} */
+.footer{
+  background-color: rgb(61, 59, 59);
+  height: 250px;
+  color: white;
+  padding: 60px;
+}
+
+.pg_down {
+  margin-top: 10px;
+  background-color: rgb(163, 163, 163);
+  height: 40px;
+}
+.pg_down1{
+  margin-left: 500px;
+}
+
+div.scrollmenuII div {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  width: 13rem;
+}
+
+div.scrollmenuII div:hover {
+  background-color: rgb(60, 69, 70);
+}
+
+.imageheightIII{
+  height: 70px;
+}
+.imageheightIV{
+  width: 70px;
+  padding: 5px;
+}
+.top2{
+  margin-top: 20px;
+}
+.bottom{
+  margin-bottom: 10px;
+}
+.crd{
+  background-color: rgb(255, 255, 255);
+}
+.left{
+  margin-left: 40px;
+  
+}
+.font_sz{
+  font-size: 30px;
+}
+.totals{
+  background-color: aliceblue;
+}
+.margin_top{
+  margin-top: 55px;
+}
+.a_center{
+  position: relative;
+  margin-left: 270px;
+}
