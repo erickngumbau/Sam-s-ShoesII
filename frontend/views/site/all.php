@@ -11,16 +11,15 @@ use yii\helpers\Url;
 
       <?php
       $all = Yii::$app->db->createCommand('SELECT * FROM item')->queryAll();
-      $url = Yii::$app->db->createCommand('SELECT url FROM item')->queryAll();
       ?>
 
-      <?php foreach ($url as $value) : ?>
+      <?php foreach ($all as $value) : ?>
         <div class="card h-100">
           <div class="card-body">
-            <img src="<?= Yii::$app->request->baseUrl ?>/images/<?= implode($value) ?>.jpg" class="img-fluid imageheightIII" alt="Responsive image">
+            <img src="<?= Yii::$app->request->baseUrl ?>/images/<?= ($value['url']) ?>.jpg" class="img-fluid imageheightIII" alt="Responsive image">
           </div>
-          <h5 class="card-title">Adapt BB Nike</h5>
-          <h3 class="card-text">KSh. 4,500</h3>
+          <h5 class="card-title"><?= ($value['name']) ?></h5>
+          <h3 class="card-text"><?= ($value['price']) ?></h3>
           <a class="btn btn-sm btn-info" href="<?= Url::to(['site/cart']) ?>" role="button">Add To Cart</a>
         </div>
       <?php endforeach; ?>

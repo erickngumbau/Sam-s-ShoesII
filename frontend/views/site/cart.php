@@ -21,25 +21,23 @@ use yii\helpers\Url;
 
 
   <?php
-      $url = Yii::$app->db->createCommand('SELECT url FROM cart')->queryAll();
-      $name = Yii::$app->db->createCommand('SELECT name FROM cart')->queryAll();
-      $price = Yii::$app->db->createCommand('SELECT price FROM cart')->queryAll();
+      $cart = Yii::$app->db->createCommand('SELECT * FROM cart')->queryAll();
       ?>
 
-      <?php foreach ($url as $value) : ?>
+      <?php foreach ($cart as $value) : ?>
             <div class="row shadow-sm txtcenter top2">
           <div class="col-lg-6 col-md-6 col-sm-6 row">
-            <img src="<?= Yii::$app->request->baseUrl ?>/images/<?= implode($value) ?>.jpg" class="img-fluid  imageheightIV" alt="Responsive image">
-            <p style="margin-left: 10px;" class="top2">Adapt BB Nike</p>
+            <img src="<?= Yii::$app->request->baseUrl ?>/images/<?= ($value['url']) ?>.jpg" class="img-fluid  imageheightIV" alt="Responsive image">
+            <p style="margin-left: 10px;" class="top2"><?= ($value['name']) ?></p>
           </div>
           <div class="col-lg-2 col-md-2 col-sm-2 top2">
             <p>1</p>
           </div>
           <div class="col-lg-2 col-md-2 col-sm-2 top2">
-            <p>KSh. 3,345</p>
+            <p><?= 'KSh. '.($value['price']) ?></p>
           </div>
           <div class="col-lg-2 col-md-2 col-sm-2 top2">
-            <p>KSh. 3,345</p>
+            <p><?= 'KSh. '.($value['price']) ?></p>
           </div>
         </div>
       <?php endforeach; ?>
